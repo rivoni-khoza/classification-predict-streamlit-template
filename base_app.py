@@ -22,6 +22,7 @@
 
 """
 # Streamlit dependencies
+from logging import PlaceHolder
 import streamlit as st
 import joblib,os
 
@@ -44,6 +45,8 @@ def main():
 	st.title("Tweet Classifer")
 	st.subheader("Climate change tweet classification")
 
+	
+
 	# Creating sidebar with selection box -
 	# you can create multiple pages this way
 	options = ["Prediction", "Information"]
@@ -62,21 +65,42 @@ def main():
 	# Building out the predication page
 	if selection == "Prediction":
 		st.info("Prediction with ML Models")
+		options = ["Random Forest", "Logistic Regression"]
+		selection = st.selectbox("Choose Model", options)
+
 		# Creating a text box for user input
 		tweet_text = st.text_area("Enter Text","Type Here")
 
+	
 		if st.button("Classify"):
 			# Transforming user input with vectorizer
 			vect_text = tweet_cv.transform([tweet_text]).toarray()
 			# Load your .pkl file with the model of your choice + make predictions
 			# Try loading in multiple models to give the user a choice
+			"""
+			if selection == 'Random Forest':
+				predictor = joblib.load(open(os.path.join("resources/random_forest_model.pkl"),"rb"))
+				prediction = predictor.predict(vect_text)
+			else:
+				predictor = joblib.load(open(os.path.join("resources/logistic_regression_model2.pkl"),"rb"))
+				prediction = predictor.predict(vect_text)
+			"""
 			predictor = joblib.load(open(os.path.join("resources/Logistic_regression.pkl"),"rb"))
 			prediction = predictor.predict(vect_text)
-
 			# When model has successfully run, will print prediction
 			# You can use a dictionary or similar structure to make this output
 			# more human interpretable.
-			st.success("Text Categorized as: {}".format(prediction))
+		"""
+			if prediction == 1:
+				print ("a beliver")
+			elif prediction == -1:
+				print ("a doubter")
+			elif prediction == 0:
+				print ("confused")
+			else:
+				None
+			"""
+		st.success("Text Categorized as: {}".format(prediction))
 
 # Required to let Streamlit instantiate our web app.  
 if __name__ == '__main__':
