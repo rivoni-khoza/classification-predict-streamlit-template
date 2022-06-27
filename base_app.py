@@ -99,19 +99,19 @@ def main():
 	# Building out the "Meet the team" page
 	if selection == "Meet the Team":
 		st.markdown(open('resources/meettheteam.md').read())
-		"""
-		st.image(Image.open('resources/imgs/EDSA_logo.png'),caption=None, use_column_width=True)
-		st.subheader("we are Explore Data Science Academy students. ZF4 Consulting:grin:")
-		st.info("")
-		st.image(Image.open('resources/imgs/Thabi.jpeg'), caption=None, width=250)
-		st.info("")
-		st.image(Image.open('resources/imgs/sima.jpeg'), caption=None, width=250)
-		st.info("")
-		st.image(Image.open('resources/imgs/mokgadi.jpeg'), caption=None, width=250)
-		st.info("")
-		st.image(Image.open('resources/imgs/palesa.jpg'), caption=None, width=250)
+		
+	# st.image(Image.open('resources/imgs/EDSA_logo.png'),caption=None, use_column_width=True)
+	# st.subheader("we are Explore Data Science Academy students. ZF4 Consulting:grin:")
+	# st.info("")
+	# st.image(Image.open('resources/imgs/Thabi.jpeg'), caption=None, width=250)
+	# st.info("")
+	# st.image(Image.open('resources/imgs/sima.jpeg'), caption=None, width=250)
+    # st.info("")
+	# st.image(Image.open('resources/imgs/mokgadi.jpeg'), caption=None, width=250)
+	# st.info("")
+	# st.image(Image.open('resources/imgs/palesa.jpg'), caption=None, width=250)
 
-		"""
+
 	# Building out the predication page
 	if selection == "Prediction":
 		st.info("Prediction with Machine Learning Models")
