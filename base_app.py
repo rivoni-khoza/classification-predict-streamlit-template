@@ -40,7 +40,7 @@ lemm = WordNetLemmatizer()
 import pandas as pd
 
 # Vectorizer
-news_vectorizer = open("resources/Pickle Dump/Tfidf_Vectorizer","rb")
+news_vectorizer = open("resources/Pickle Dump/Tfidf_Vectorizer.pkl","rb")
 tweet_cv = joblib.load(news_vectorizer) # loading your vectorizer from the pkl file
 
 # Load your raw data
