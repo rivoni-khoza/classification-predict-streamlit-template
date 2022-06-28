@@ -75,16 +75,25 @@ def main():
 	# Building out the "Information" page
 	if selection == "Model Introduction":
 		
+		st.subheader("Model Introduction")
+
 		# You can read a markdown file from supporting resources folder
 		st.markdown(open('resources/modelintroduction.md').read())
         
 	if selection == "Insights":
+		st.subheader("Man-made climate change ")
 
-		st.subheader("Raw Twitter data and label")
+		# You can read a markdown file from supporting resources folder
+		st.markdown(open('resources/mmcc.md').read())
+
+		st.video("https://www.youtube.com/watch?v=sKDWW9WlPSc")
+
+		st.subheader("Interesting Insights into the sample of tweets coolected")
+		
 		if st.checkbox('Show raw data'): # data is hidden if box is unchecked
 			st.write(raw[['sentiment', 'message']]) # will write the df to the page
             
-		st.subheader("Insights into the Raw Twitter Data ")
+		st.subheader("Breakdown of the Raw Twitter Data ")
 		st.text('This section explains the raw twitter data used to train the models for this App')
 		st.image('resources/imgs/piecharttwitet.jpg', width= 500)
 		st.text('The dataset contains 15819 tweets across the four sentiment classes. The figure above shows the distribution of the data across the classes. As can be seen, the pro climate change class contains the bulk of the data.')
@@ -114,10 +123,14 @@ def main():
 
 	# Building out the predication page
 	if selection == "Prediction":
+
+		st.image(['resources/imgs/cars.jpg', 'resources/imgs/Split.jpg', 'resources/imgs/park.jpg'], width= 230)
+
+		st.subheader("Sentiment Predictor")
+
 		st.info("Prediction with Machine Learning Models")
         
         
-
 		Listmodels = ['Support Vector Classifier','Stack Classifier','logistic Regression Classifier']
 		modelselect = st.selectbox('Choose a Model',Listmodels)
 
