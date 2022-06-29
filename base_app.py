@@ -88,7 +88,7 @@ def main():
 
 		st.video("https://www.youtube.com/watch?v=sKDWW9WlPSc")
 
-		st.subheader("Interesting Insights into the sample of tweets coolected")
+		st.subheader("Interesting Insights into the sample of tweets collected")
 		
 		if st.checkbox('Show raw data'): # data is hidden if box is unchecked
 			st.write(raw[['sentiment', 'message']]) # will write the df to the page
