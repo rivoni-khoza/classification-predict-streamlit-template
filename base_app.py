@@ -23,6 +23,7 @@
 """
 
 # Streamlit dependencies
+from matplotlib.pyplot import text
 import streamlit as st
 import joblib,os
 import pickle
@@ -69,7 +70,7 @@ def main():
 
 	# Creating sidebar with selection box -
 	# you can create multiple pages this way
-	options = ["Prediction", "Model Introduction","Insights", "Meet the Team"]
+	options = ["Prediction", "Model Introduction","Insights", "About"]
 	selection = st.sidebar.selectbox("Choose Option", options)
 
 	# Building out the "Information" page
@@ -88,38 +89,60 @@ def main():
 
 		st.video("https://www.youtube.com/watch?v=sKDWW9WlPSc")
 
-		st.subheader("Interesting Insights into the sample of tweets collected")
+		st.subheader("Insights into the sample of tweets collected")
+
+		st.markdown(open('resources/intro eda.md').read())
 		
 		if st.checkbox('Show raw data'): # data is hidden if box is unchecked
 			st.write(raw[['sentiment', 'message']]) # will write the df to the page
-            
-		st.subheader("Breakdown of the Raw Twitter Data ")
-		st.text('This section explains the raw twitter data used to train the models for this App')
-		st.image('resources/imgs/piecharttwitet.jpg', width= 500)
-		st.text('The dataset contains 15819 tweets across the four sentiment classes. The figure above shows the distribution of the data across the classes. As can be seen, the pro climate change class contains the bulk of the data.')
-		st.image('resources/imgs/lengthoftweet.jpg', width= 500)  
-		st.text('The figure above represents the average number of words per sentiment class. As can be seen the pro climate change class contains the longest tweets, however, this class does not  differ from the other classes enough to be a significant identifier.')
-      
-		st.image('resources/imgs/tags.jpg', width= 500)
-		st.text('The figure above represents the number of times a tweet was repeated in the dataset. Approximately 14% of the tweets were retweets.')
-        
-		st.markdown(open('resources/preprocess.md').read())   
-        
-	# Building out the "Meet the team" page
-	if selection == "Meet the Team":
-		st.markdown(open('resources/meettheteam.md').read())
-		
-	# st.image(Image.open('resources/imgs/EDSA_logo.png'),caption=None, use_column_width=True)
-	# st.subheader("we are Explore Data Science Academy students. ZF4 Consulting:grin:")
-	# st.info("")
-	# st.image(Image.open('resources/imgs/Thabi.jpeg'), caption=None, width=250)
-	# st.info("")
-	# st.image(Image.open('resources/imgs/sima.jpeg'), caption=None, width=250)
-    # st.info("")
-	# st.image(Image.open('resources/imgs/mokgadi.jpeg'), caption=None, width=250)
-	# st.info("")
-	# st.image(Image.open('resources/imgs/palesa.jpg'), caption=None, width=250)
 
+		st.text('The dataset as shown above contains 15819 tweets across the four sentiment classes')
+  
+		# st.subheader("Breakdown of the Raw Twitter Data")
+		st.markdown(open('resources/Fig Explanation 1.md').read())
+		
+		st.image('resources/imgs/Sentiment_Data_Distribution.png', width= 500)
+		st.markdown(open('resources/Fig Explanation 2.md').read())
+
+		st.text('Now, lets have a look at locations:')
+		st.image(['resources/imgs/Pro_Climate_Change_People_Locations_Organizations.png', 'resources/imgs/Anti_Climate_Change_People_Locations_Organizations.png'], width= 500)  
+		st.markdown(open('resources/Fig Explanation 3.md').read())
+
+		st.text('Hashtag distribution for the various classes:')
+		st.image(['resources/imgs/Pro_Climate_Change_Hashtag_Distribution.png', 'resources/imgs/Anti_Climate_Change_Hashtag_distribution.png', 'resources/imgs/Neutral_Sentiments_Hastafg_Distribution.png', 'resources/imgs/News_Related_Hastag_Distribution.png'], width= 500)
+		st.markdown(open('resources/Fig Explanation 4.md').read())
+
+		st.text('WordClouds:')
+		st.image(['resources/imgs/Pro_Climate_Change_word_cloud.png', 'resources/imgs/Anti_Climate_Sentiment_Word_Cloud.png', 'resources/imgs/News_Related_Word_Cloud.png'], width= 500)
+		st.markdown(open('resources/Fig Explanation 5.md').read())
+          
+        
+	# Building out the "About" page
+	if selection == "About":
+		st.image(Image.open('resources/imgs/EDSA_logo.png'),caption=None, use_column_width=True)
+		
+		st.markdown(open('resources/HIW.md').read())
+
+	#st.markdown(open('resources/meettheteam.md').read())
+		
+	
+		st.info("Rivoni Khoza - Team Leader")
+		st.image(Image.open('resources/imgs/Rivo1.png'), caption=None, width=250)
+		
+		st.info("Immanuel Onwochei")
+		st.image(Image.open('resources/imgs/Ghandi.png'), caption=None, width=250)
+    	
+		st.info("Raymond Apenteng")
+		st.image(Image.open('resources/imgs/Me wlp.png'), caption=None, width=250)
+		
+		st.info("Kelvin Mwaniki")
+		st.image(Image.open('resources/imgs/Kelvin_Pic.png'), caption=None, width=250)
+		
+		st.info("Akinbowale Akin-Taylor")
+		st.image(Image.open('resources/imgs/Akin.png'), caption=None, width=250)
+		
+		st.info("Peter Adegbe Otanwa")
+		st.image(Image.open('resources/imgs/PeterPic.png'), caption=None, width=250)
 
 	# Building out the predication page
 	if selection == "Prediction":

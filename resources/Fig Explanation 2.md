@@ -1,0 +1,1 @@
+The figure above shows the distribution of the data across the classes. As can be seen, the pro-climate change class make up the bulk of the data with over 8000 tweets. The anti-climate change class has the least number of tweets (1296). The neutrals make up 2353 of the tweets, while news articles make up 3640 of the tweets.

@@ -1,0 +1,1 @@
+The images above illustrate the frequently used words for the various classes (Pro, Anti, News). The frequently used words are more visible in the respective image.

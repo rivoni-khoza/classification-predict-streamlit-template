@@ -1,6 +1,4 @@
-# Meet the Team
-
-Team Members:
+**Meet the Team**
 
 Rivoni Khoza - Team Leader 
 
@@ -14,6 +12,3 @@ Akinbowale Akin-Taylor
 
 Peter Adegbe Otanwa 
 
-**Contact Us:
-
-ZF4.Consulting@gmail.com

@@ -1,0 +1,1 @@
+The images above show the locations of the tweets for both pro-climate change and anti-climate change classes. Most of the tweets originate from North America. We can infer that people within this region are generally more concerned about climate change. Alternatively, it could be a result of the data collection (most of the data collected was from this region).
