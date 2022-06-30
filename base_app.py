@@ -131,22 +131,22 @@ def main():
 		st.markdown(open('resources/meettheteam.md').read())
 
 		st.image(('resources/imgs/Rivo1.png'), caption=None, width=250)
-		st.info("Rivoni Khoza - Team Leader")
-		
-		st.image(('resources/imgs/Ghandi.png'), caption=None, width=250)
-		st.info("Immanuel Onwochei")	
+		st.info("Rivoni Khoza - MANAGING DIRECTOR")	
 		
 		st.image(('resources/imgs/Me wlp.png'), caption=None, width=250)
-		st.info("Raymond Apenteng")
-		
-		st.image(('resources/imgs/Kelvin_Pic.png'), caption=None, width=250)
-		st.info("Kelvin Mwaniki")
+		st.info("Raymond Apenteng - DEPUTY MANAGING DIRECTOR")
 
 		st.image(('resources/imgs/Akin.png'), caption=None, width=250)
-		st.info("Akinbowale Akin-Taylor")
+		st.info("Akinbowale Akin-Taylor - STRATEGIC MANAGEMENT CONSULTANT")
+
+		st.image(('resources/imgs/Kelvin_Pic.png'), caption=None, width=250)
+		st.info("Kelvin Mwaniki - SENIOR DATA SCIENTIST")
+
+		st.image(('resources/imgs/Ghandi.png'), caption=None, width=250)
+		st.info("Immanuel Onwochei - SENIOR DATA ANALYST")
 
 		st.image(('resources/imgs/PeterPic.png'), caption=None, width=250)
-		st.info("Peter Adegbe Otanwa")
+		st.info("Peter Adegbe Otanwa - DATA ANALYST")
 
 
 	# Building out the predication page
