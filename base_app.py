@@ -119,7 +119,7 @@ def main():
         
 	# Building out the "About" page
 	if selection == "About":
-		st.image(Image.open('resources/imgs/EDSA_logo.png'),caption=None, use_column_width=True)
+		st.image(('resources/imgs/EDSA_logo.png'),caption=None, use_column_width=True)
 		
 		st.markdown(open('resources/HIW.md').read())
 
@@ -127,22 +127,22 @@ def main():
 		
 	
 		st.info("Rivoni Khoza - Team Leader")
-		st.image(Image.open('resources/imgs/Rivo1.png'), caption=None, width=250)
+		st.image(('resources/imgs/Rivo1.png'), caption=None, width=250)
 		
 		st.info("Immanuel Onwochei")
-		st.image(Image.open('resources/imgs/Ghandi.png'), caption=None, width=250)
+		st.image(('resources/imgs/Ghandi.png'), caption=None, width=250)
     	
 		st.info("Raymond Apenteng")
-		st.image(Image.open('resources/imgs/Me wlp.png'), caption=None, width=250)
+		st.image(('resources/imgs/Me wlp.png'), caption=None, width=250)
 		
 		st.info("Kelvin Mwaniki")
-		st.image(Image.open('resources/imgs/Kelvin_Pic.png'), caption=None, width=250)
+		st.image(('resources/imgs/Kelvin_Pic.png'), caption=None, width=250)
 		
 		st.info("Akinbowale Akin-Taylor")
-		st.image(Image.open('resources/imgs/Akin.png'), caption=None, width=250)
+		st.image(('resources/imgs/Akin.png'), caption=None, width=250)
 		
 		st.info("Peter Adegbe Otanwa")
-		st.image(Image.open('resources/imgs/PeterPic.png'), caption=None, width=250)
+		st.image(('resources/imgs/PeterPic.png'), caption=None, width=250)
 
 	# Building out the predication page
 	if selection == "Prediction":
