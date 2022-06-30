@@ -1,5 +1,4 @@
 # Pre-processing of the  twitter data:
-
 Removed:
 
  URL’s
