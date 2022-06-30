@@ -1,0 +1,1 @@
+**Now, lets have a look at locations**:

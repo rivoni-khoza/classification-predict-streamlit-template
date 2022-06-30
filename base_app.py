@@ -104,16 +104,16 @@ def main():
 		st.image('resources/imgs/Sentiment_Data_Distribution.png', width= 500)
 		st.markdown(open('resources/Fig Explanation 2.md').read())
 
-		st.text('Now, lets have a look at locations:')
-		st.image(['resources/imgs/Pro_Climate_Change_People_Locations_Organizations.png', 'resources/imgs/Anti_Climate_Change_People_Locations_Organizations.png'], width= 500)  
+		st.markdown(open('resources/Locations.md').read())
+		st.image(['resources/imgs/Pro_Climate_Change_People_Locations_Organizations.png', 'resources/imgs/Anti_Climate_Change_People_Locations_Organizations.png'], width= 300)  
 		st.markdown(open('resources/Fig Explanation 3.md').read())
 
-		st.text('Hashtag distribution for the various classes:')
-		st.image(['resources/imgs/Pro_Climate_Change_Hashtag_Distribution.png', 'resources/imgs/Anti_Climate_Change_Hashtag_distribution.png', 'resources/imgs/Neutral_Sentiments_Hastafg_Distribution.png', 'resources/imgs/News_Related_Hastag_Distribution.png'], width= 500)
+		st.markdown(open('resources/Hashtags.md').read())
+		st.image(['resources/imgs/Pro_Climate_Change_Hashtag_Distribution.png', 'resources/imgs/Anti_Climate_Change_Hashtag_distribution.png', 'resources/imgs/Neutral_Sentiments_Hastafg_Distribution.png', 'resources/imgs/News_Related_Hastag_Distribution.png'], width= 250)
 		st.markdown(open('resources/Fig Explanation 4.md').read())
 
-		st.text('WordClouds:')
-		st.image(['resources/imgs/Pro_Climate_Change_word_cloud.png', 'resources/imgs/Anti_Climate_Sentiment_Word_Cloud.png', 'resources/imgs/News_Related_Word_Cloud.png'], width= 500)
+		st.markdown(open('resources/Word Clouds.md').read())
+		st.image(['resources/imgs/Pro_Climate_Change_word_cloud.png', 'resources/imgs/Anti_Climate_Sentiment_Word_Cloud.png', 'resources/imgs/News_Related_Word_Cloud.png'], width= 250)
 		st.markdown(open('resources/Fig Explanation 5.md').read())
           
         
@@ -122,27 +122,25 @@ def main():
 		st.image(('resources/imgs/EDSA_logo.png'),caption=None, use_column_width=True)
 		
 		st.markdown(open('resources/HIW.md').read())
-
-		st.markdown(open('resources/meettheteam.md').read())
 		
-
-		st.info("Rivoni Khoza - Team Leader")
 		st.image(('resources/imgs/Rivo1.png'), caption=None, width=250)
+		st.info("Rivoni Khoza - Team Leader")
 		
-		st.info("Immanuel Onwochei")
 		st.image(('resources/imgs/Ghandi.png'), caption=None, width=250)
-    	
-		st.info("Raymond Apenteng")
+		st.info("Immanuel Onwochei")	
+		
 		st.image(('resources/imgs/Me wlp.png'), caption=None, width=250)
+		st.info("Raymond Apenteng")
 		
-		st.info("Kelvin Mwaniki")
 		st.image(('resources/imgs/Kelvin_Pic.png'), caption=None, width=250)
-		
-		st.info("Akinbowale Akin-Taylor")
+		st.info("Kelvin Mwaniki")
+
 		st.image(('resources/imgs/Akin.png'), caption=None, width=250)
-		
-		st.info("Peter Adegbe Otanwa")
+		st.info("Akinbowale Akin-Taylor")
+
 		st.image(('resources/imgs/PeterPic.png'), caption=None, width=250)
+		st.info("Peter Adegbe Otanwa")
+
 
 	# Building out the predication page
 	if selection == "Prediction":
