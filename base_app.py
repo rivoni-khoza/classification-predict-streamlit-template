@@ -128,6 +128,8 @@ def main():
 
 		st.markdown(open('resources/HIW.md').read())
 		
+		st.markdown(open('resources/meettheteam.md').read())
+
 		st.image(('resources/imgs/Rivo1.png'), caption=None, width=250)
 		st.info("Rivoni Khoza - Team Leader")
 		
