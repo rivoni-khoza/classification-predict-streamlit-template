@@ -82,14 +82,10 @@ def main():
 		st.markdown(open('resources/modelintroduction.md').read())
         
 	if selection == "Insights":
-		st.subheader("Man-made climate change ")
-
-		# You can read a markdown file from supporting resources folder
-		st.markdown(open('resources/mmcc.md').read())
-
-		st.video("https://www.youtube.com/watch?v=sKDWW9WlPSc")
 
 		st.subheader("Insights into the sample of tweets collected")
+
+		st.image('resources/imgs/37-The-Techniques-Team-and-Tools-for-Effective-Data-Science_1.jpg', width= 300)
 
 		st.markdown(open('resources/intro eda.md').read())
 		
@@ -100,18 +96,20 @@ def main():
   
 		# st.subheader("Breakdown of the Raw Twitter Data")
 		st.markdown(open('resources/Fig Explanation 1.md').read())
-		
-		st.image('resources/imgs/Sentiment_Data_Distribution.png', width= 500)
+		st.image('resources/imgs/Sentiment_Data_Distribution.png', width= 300)
 		st.markdown(open('resources/Fig Explanation 2.md').read())
-
+        
+		st.markdown("***")
 		st.markdown(open('resources/Locations.md').read())
 		st.image(['resources/imgs/Pro_Climate_Change_People_Locations_Organizations.png', 'resources/imgs/Anti_Climate_Change_People_Locations_Organizations.png'], width= 300)  
 		st.markdown(open('resources/Fig Explanation 3.md').read())
 
+		st.markdown("***")
 		st.markdown(open('resources/Hashtags.md').read())
 		st.image(['resources/imgs/Pro_Climate_Change_Hashtag_Distribution.png', 'resources/imgs/Anti_Climate_Change_Hashtag_distribution.png', 'resources/imgs/Neutral_Sentiments_Hastafg_Distribution.png', 'resources/imgs/News_Related_Hastag_Distribution.png'], width= 250)
 		st.markdown(open('resources/Fig Explanation 4.md').read())
-
+		
+		st.markdown("***")
 		st.markdown(open('resources/Word Clouds.md').read())
 		st.image(['resources/imgs/Pro_Climate_Change_word_cloud.png', 'resources/imgs/Anti_Climate_Sentiment_Word_Cloud.png', 'resources/imgs/News_Related_Word_Cloud.png'], width= 250)
 		st.markdown(open('resources/Fig Explanation 5.md').read())
@@ -121,6 +119,13 @@ def main():
 	if selection == "About":
 		st.image(('resources/imgs/EDSA_logo.png'),caption=None, use_column_width=True)
 		
+		st.subheader("Man-made climate change ")
+
+		# You can read a markdown file from supporting resources folder
+		st.markdown(open('resources/mmcc.md').read())
+
+		st.video("https://www.youtube.com/watch?v=sKDWW9WlPSc")
+
 		st.markdown(open('resources/HIW.md').read())
 		
 		st.image(('resources/imgs/Rivo1.png'), caption=None, width=250)
